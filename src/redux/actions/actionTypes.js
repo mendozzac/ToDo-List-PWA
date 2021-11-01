@@ -1,5 +1,5 @@
 const actionType = {
-  loadTask: "LOAD_TASK",
+  loadTasks: "LOAD_TASKS",
   createTask: "CREATE_TASK",
   deleteTask: "DELETE_TASK",
   updateTask: "UPDATE_TASK",
