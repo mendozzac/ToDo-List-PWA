@@ -8,7 +8,7 @@ const TodoList = () => {
           value=""
           id="flexCheck"
         />
-        <label className="form-check-label" for="flexCheck">
+        <label className="form-check-label" htmlFor="flexCheck">
           Hecho
         </label>
         <input
@@ -17,7 +17,7 @@ const TodoList = () => {
           value=""
           aria-label="Disabled input example"
           disabled
-          readonly
+          readOnly
         />
         <button className="btn btn-danger">Borrar</button>
       </div>
