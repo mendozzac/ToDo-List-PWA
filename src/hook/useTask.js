@@ -7,16 +7,11 @@ import {
 } from "../redux/taskThunk/taskThunk";
 
 const useTasks = () => {
-  const { tasks } = useSelector(({ tasks }) => ({
-    tasks,
-  }));
+  const tasks = useSelector(({ tasks }) => tasks);
   const dispatch = useDispatch();
-  console.log("hook", tasks);
-
   const loadTasks = useCallback(() => {
     dispatch(loadTasksThunk());
   }, [dispatch]);
-
   const deleteTask = useCallback(
     (id) => {
       dispatch(deleteTaskThunk(id));

@@ -2,8 +2,7 @@ import actionType from "../actions/actionTypes";
 
 const tasksReducer = (tasks = [], action) => {
   let newTasks;
-
-  switch (actionType) {
+  switch (action.type) {
     case actionType.loadTasks:
       newTasks = [...action.tasks];
       break;
