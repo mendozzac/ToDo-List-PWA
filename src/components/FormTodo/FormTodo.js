@@ -7,9 +7,17 @@ const FormTodo = () => {
   const initialData = { task: "" };
 
   const [taskData, setTaskData] = useState(initialData);
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  const checkForm = () => {
+    if (taskData.task !== "") {
+      setIsDisabled(false);
+    }
+  };
 
   const changeData = (event) => {
     setTaskData({ ...taskData, [event.target.id]: event.target.value });
+    checkForm();
   };
 
   const resetForm = () => {
@@ -43,7 +51,11 @@ const FormTodo = () => {
           />
         </div>
         <div className="col-auto">
-          <button type="submit" className="btn btn-primary mb-3">
+          <button
+            type="submit"
+            className="btn btn-primary mb-3"
+            disabled={isDisabled}
+          >
             +
           </button>
         </div>
