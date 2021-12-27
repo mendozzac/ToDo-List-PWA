@@ -10,9 +10,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 export const loadTasksThunk = () => async (dispatch) => {
   const response = await fetch(apiUrl);
   const tasks = await response.json();
-
   dispatch(loadTasksAction(tasks));
-  console.log("thunk", tasks);
 };
 
 export const createTaskThunk = (task) => async (dispatch) => {

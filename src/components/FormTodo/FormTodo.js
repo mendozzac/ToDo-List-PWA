@@ -5,6 +5,7 @@ const FormTodo = () => {
   const { createTask } = useTask();
 
   const initialData = { task: "" };
+
   const [taskData, setTaskData] = useState(initialData);
 
   const changeData = (event) => {
@@ -17,16 +18,14 @@ const FormTodo = () => {
 
   const onCreateTask = (event) => {
     event.preventDefault();
-    const url = "https://cosas-todo.herokuapp.com/todo";
     const newTask = {
       task: taskData.task,
       done: false,
     };
-
-    createTask(newTask, url);
-
+    createTask(newTask);
     resetForm();
   };
+
   return (
     <>
       <form className="row g-3" onSubmit={onCreateTask}>
