@@ -11,6 +11,7 @@ const useTasks = () => {
     tasks,
   }));
   const dispatch = useDispatch();
+  console.log("hook", tasks);
 
   const loadTasks = useCallback(() => {
     dispatch(loadTasksThunk());

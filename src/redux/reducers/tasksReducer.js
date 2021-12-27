@@ -1,7 +1,7 @@
 import actionType from "../actions/actionTypes";
 
 const tasksReducer = (tasks = [], action) => {
-  let newTasks = tasks;
+  let newTasks;
 
   switch (actionType) {
     case actionType.loadTasks:
@@ -14,7 +14,13 @@ const tasksReducer = (tasks = [], action) => {
       newTasks = tasks.filter((task) => task.id !== action.id);
       break;
     case actionType.updateTask:
-      newTasks = [...action.task];
+      newTasks = tasks.map((task) => {
+        if (task.id === action.task.id) {
+          return action.task;
+        } else {
+          return task;
+        }
+      });
       break;
     default:
       newTasks = tasks;
