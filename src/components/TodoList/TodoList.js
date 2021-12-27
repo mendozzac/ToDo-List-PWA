@@ -4,7 +4,7 @@ import Task from "../Task/Task";
 const TodoList = () => {
   const { tasks } = useTasks();
   return (
-    <ul>
+    <ul className="container">
       {tasks
         .sort((task) => (task.done ? 1 : -1))
         .map((task) => (
