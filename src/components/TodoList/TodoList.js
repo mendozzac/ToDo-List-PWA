@@ -1,4 +1,8 @@
+import useTasks from "../../hook/useTask";
+
 const TodoList = () => {
+  const { tasks } = useTasks();
+  console.log("list", tasks);
   return (
     <>
       <div className="container form-check">
@@ -11,14 +15,16 @@ const TodoList = () => {
         <label className="form-check-label" htmlFor="flexCheck">
           Hecho
         </label>
+
         <input
           className="form-control col-4"
           type="text"
-          value=""
+          value={tasks.name}
           aria-label="Disabled input example"
           disabled
           readOnly
         />
+
         <button className="btn btn-danger">Borrar</button>
       </div>
     </>
