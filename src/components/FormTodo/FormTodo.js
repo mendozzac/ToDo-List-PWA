@@ -28,8 +28,8 @@ const FormTodo = () => {
 
   return (
     <>
-      <form className="row g-3" onSubmit={onCreateTask}>
-        <div className="col-auto">
+      <form className="row g-2 justify-content-center" onSubmit={onCreateTask}>
+        <div className="col-8">
           <label htmlFor="task" className="visually-hidden">
             Agrega una Tarea
           </label>
@@ -44,7 +44,7 @@ const FormTodo = () => {
         </div>
         <div className="col-auto">
           <button type="submit" className="btn btn-primary mb-3">
-            Añadir
+            +
           </button>
         </div>
       </form>
