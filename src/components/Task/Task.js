@@ -18,10 +18,11 @@ const Task = ({ task }) => {
   };
 
   const changeChecked = () => {
-    updateTask({
+    const newTask = {
       ...task,
       done: !task.done,
-    });
+    };
+    updateTask(newTask);
   };
 
   const onUpdate = (event) => {

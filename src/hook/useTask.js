@@ -23,12 +23,9 @@ const useTasks = () => {
     dispatch(createTaskThunk(task));
   };
 
-  const updateTask = useCallback(
-    (newTask) => {
-      dispatch(updateTaskThunk(newTask));
-    },
-    [dispatch]
-  );
+  const updateTask = (newTask) => {
+    dispatch(updateTaskThunk(newTask));
+  };
 
   return {
     tasks,
