@@ -1,14 +1,7 @@
-# TODO-Page
+# ToDo List PWA
 
--Renderizar un formulario y un listado.
+Aplición web progresiva, desarrollada en React con Redux y usando Bootstrap.
 
-# Form
+Clásica ToDo list, que se sirve de una Restful Api con deploy en Heroku, en la que se aplica un CRUD completo.
 
--Renderizar un formulario.
--Recibir información cumplimentada por el usuario.
--Enviar la información para ser almacenada.
-
-# Listado
-
--Renderizar lista de tareas.
--Recibir lista de tareas.
+[https://cosas-que-hacer.netlify.app/]
