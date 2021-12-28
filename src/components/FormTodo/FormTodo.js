@@ -15,11 +15,6 @@ const FormTodo = () => {
     }
   };
 
-  const changeData = (event) => {
-    setTaskData({ ...taskData, [event.target.id]: event.target.value });
-    checkForm();
-  };
-
   const resetForm = () => {
     setTaskData(initialData);
   };
@@ -32,6 +27,11 @@ const FormTodo = () => {
     };
     createTask(newTask);
     resetForm();
+  };
+
+  const changeData = (event) => {
+    setTaskData({ ...taskData, [event.target.id]: event.target.value });
+    checkForm();
   };
 
   return (
